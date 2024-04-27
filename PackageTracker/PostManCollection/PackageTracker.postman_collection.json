@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "53b5247c-f48b-4da8-9ec2-6d9c8e079a85",
+		"name": "PackageTracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7690755"
+	},
+	"item": [
+		{
+			"name": "Traveler",
+			"item": [
+				{
+					"name": "showAllTravelers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/traveler",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"traveler"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"samer@demo.com\",\r\n    \"password\" : \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "findAllTickets",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW1lckBkZW1vLmNvbSIsImV4cCI6MTcxNDE5MDI0NCwiaWF0IjoxNzE0MTg5MTY0fQ.TkB4fneWuAKer1vqTMGegh5PmnuJto_lczrUxdKqryWWvsa2RKroNlwH3EbHS2KoYzNd2PXQ930jiat9hcsipQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findTicketById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW1lckBkZW1vLmNvbSIsImV4cCI6MTcxNDE5MDI0NCwiaWF0IjoxNzE0MTg5MTY0fQ.TkB4fneWuAKer1vqTMGegh5PmnuJto_lczrUxdKqryWWvsa2RKroNlwH3EbHS2KoYzNd2PXQ930jiat9hcsipQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTicket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW1lckBkZW1vLmNvbSIsImV4cCI6MTcxNDE5MTQzMywiaWF0IjoxNzE0MTkwMzUzfQ.xtTCQyn7yyDxghPMTCvyrj6vTjXR-pa1FPpD345AfxDWvJgk3tlIvcVA0OkoYbi5BHG-rMqHLofm-aLGVtgXxg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveTicket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW1lckBkZW1vLmNvbSIsImV4cCI6MTcxNDE5MTQzMywiaWF0IjoxNzE0MTkwMzUzfQ.xtTCQyn7yyDxghPMTCvyrj6vTjXR-pa1FPpD345AfxDWvJgk3tlIvcVA0OkoYbi5BHG-rMqHLofm-aLGVtgXxg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketId\": 1,\r\n    \"flight_number\": \"fd123456\",\r\n    \"bagsDesc\": \"brown leather bag\",\r\n    \"flight_date\": \"2024-04-27T03:55:09.818+00:00\",\r\n    \"submit_date\": \"2024-04-27T03:55:09.818+00:00\",\r\n    \"closeCase_date\": null,\r\n    \"ticketStatus\": \"Pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllTicketsByStatus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW1lckBkZW1vLmNvbSIsImV4cCI6MTcxNDE5MDM3OSwiaWF0IjoxNzE0MTg5Mjk5fQ.iHOEriZfQMF8Evq_76sU9Ha_MskorLkwiWyNm0ovGLRlgAcIJ5lGQCGiveekI28_pBM_eZo3XjwGv5UtqWGPFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/ticket/getAllByStatus/Pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"ticket",
+								"getAllByStatus",
+								"Pending"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
